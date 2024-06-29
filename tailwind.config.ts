@@ -1,3 +1,4 @@
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -5,6 +6,8 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
+    "./node_modules/@nextui-org/theme/dist/components/(button|navbar|card|image|progress|input|dropdown|avatar|pagination|link).js",
   ],
   theme: {
     extend: {
@@ -13,8 +16,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      aspectRatio: {
+        "1/2": "1 / 2",
+        "1/1.5": "1 / 1.5",
+        "1/1.7": "1 / 1.7",
+      },
     },
   },
-  plugins: [],
+  plugins: [nextui()],
 };
 export default config;

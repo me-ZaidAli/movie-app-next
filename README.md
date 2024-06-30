@@ -5,8 +5,8 @@ I have never worked with Next.js so it took me a bit of time to wrap my head aro
 
 ## Steps to run
 
-- Execute `npm install`. This'll initialize prismaORM as well.
-- Go to the prisma directory and execute `npx prisma dev migrate`. This'll apply all your migrations to your database.
+- Execute `npm install`
+- Go to the prisma directory and execute `npx prisma dev migrate` and `npm prisma generate`. This'll apply all your migrations to your database and initialize the prisma client.
 - Go to [https://github.com/settings/developers](https://github.com/settings/developers) and create an app. Obtain `CLIENT_ID`, `CLIENT_SECRET` and put them in `.env.local`. Make sure to st home url to `http://localhost:3000` and authorization callback to `http://localhost:3000/api/auth/callback/github` in the auth app.
 - execute `npm run dev` to start the server.
 
